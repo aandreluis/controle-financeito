@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <title>Controle de despesas</title>
+  </head>
+  <body class="container">
+		
+		<div class="conteudo">
+			<p class="h1 text-center">Controle de despesas</p>
+      <h4 class="text-end mt-4">Saldo atual</h4>
+      
+      <h1 id="balance" class="balance text-end">R$ 0.00</h1>
+
+      <div class="inc-exp-container">
+        <div>
+          <h4>Receitas</h4>
+          <p id="money-plus" class="money plus">+ R$0.00</p>
+        </div>
+
+        <div>
+          <h4>Despesas</h4>
+          <p id="money-minus" class="money minus">- R$0.00</p>
+        </div>
+      </div>
+
+      <h3>Adicionar transação</h3>
+      
+      <form id="form">
+        <div class="form-control">
+          <label for="text" class="form-label">Nome</label>
+          <input autofocus type="text" id="text" class="form-control" placeholder="Nome da transação" />
+					
+        </div>
+
+        <div class="form-control">
+          <label for="amount" class="form-label">Valor <br />
+            <small>(negativo = despesas, positivo = receitas)</small>
+          </label>
+          <input type="number" step=".01" id="amount" class="form-control" placeholder="Valor da transação" />
+					<div id="validationServer05Feedback" class="invalid-feedback text-end">
+						Por favor, preencha os dois campos.
+					</div>
+        </div>
+
+    	<button class="btn btn-primary btn-padrao">Adicionar</button>
+      </form>
+
+			<h3>Transações</h3>
+			<small>(use a rolagem para visualizar todas <i class="bi bi-arrow-down"></i>)</small>
+
+			<div class="transactions-div">
+				<ul id="transactions" class="transactions">
+					<!-- <li class="minus">
+						Salário <span>-$400</span><button class="delete-btn">x</button>
+					</li> -->
+				</ul>
+			</div>
+    </div>
+		
+    <script src="./js/script.js"></script>
+  </body>
+</html>
